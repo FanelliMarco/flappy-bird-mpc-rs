@@ -1,0 +1,13 @@
+[package]
+name = "mpc-controller"
+description = "Model Predictive Control for Flappy Bird, solved as an exact mixed-integer quadratic program."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[lib]
+name = "mpc_controller"
+
+# Pure logic crate: no external dependencies, fully `#![forbid(unsafe_code)]`.
+[dependencies]

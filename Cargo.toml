@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/mpc-controller",
+    "crates/flappy-game",
+    "crates/flappy-sim",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Flappy Bird MPC (Rust port)"]
+repository = "https://github.com/yourname/flappy-bird-mpc-rs"
+
+# Shared third-party dependencies, version-pinned in one place.
+[workspace.dependencies]
+rand = "0.8"
+macroquad = "0.4"
+
+# Internal crates referenced by path so they resolve inside the workspace.
+mpc-controller = { path = "crates/mpc-controller" }
+flappy-game = { path = "crates/flappy-game" }
+
+[profile.release]
+opt-level = 3
+lto = "thin"

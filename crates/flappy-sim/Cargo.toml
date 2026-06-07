@@ -1,0 +1,16 @@
+[package]
+name = "flappy-sim"
+description = "Real-time Flappy Bird simulation rendered with macroquad and flown by the MPC controller."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "flappy-sim"
+path = "src/main.rs"
+
+[dependencies]
+macroquad = { workspace = true }
+flappy-game = { workspace = true }
+mpc-controller = { workspace = true }
